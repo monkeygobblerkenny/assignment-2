@@ -31,8 +31,21 @@ const array1 = [1, 4, 9, 16];
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+  const filtered_arr = []
+  for(let i=0; i<this.length;i++){
+    const pass_test = callbackFn(this[i],i,this)
+    if (pass_test){
+      filtered_arr.push(this[i])
+    }
+  }
+  return filtered_arr
 };
+
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+// const result = words.myFilter(word => word.length > 5);
+// console.log(words);
+// console.log(result);
+
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
@@ -73,3 +86,4 @@ Object.myKeys = function(object) {
 Object.myValues = function(object) {
   // Place your code here.
 };
+
