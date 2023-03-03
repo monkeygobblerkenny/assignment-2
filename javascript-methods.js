@@ -156,7 +156,7 @@ Object.myKeys = function(object) {
   // Place your code here.
   let arr = [];
   for (x in object){
-    console.log(x)
+    //console.log(x)
     arr.push(x);
   }
   return arr;
@@ -175,5 +175,21 @@ Object.myKeys = function(object) {
 // VALUES //
 Object.myValues = function(object) {
   // Place your code here.
+  let arr = [];
+  for (x in object){
+    //console.log(object[x]);
+    arr.push(object[x]);
+  }
+  return arr;
 };
+
+// const object1 = {
+//   a: 'somestring',
+//   b: 42,
+//   c: false
+// };
+
+// console.log(Object.myValues(object1));
+// Expected output: Array ["somestring", 42, false]
+
 
