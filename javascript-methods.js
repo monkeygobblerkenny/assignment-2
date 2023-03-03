@@ -11,7 +11,23 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
   // Place your code here.
+  let arr = [...this];
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] === undefined) continue;
+
+    arr[i] = callbackFn(this[i], i, this);
+  }
+  return arr;
 };
+
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+// const map1 = array1.myMap(x => x * 2);
+// console.log(array1);
+// console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
