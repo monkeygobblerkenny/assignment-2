@@ -154,7 +154,23 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 // KEYS //
 Object.myKeys = function(object) {
   // Place your code here.
+  let arr = [];
+  for (x in object){
+    console.log(x)
+    arr.push(x);
+  }
+  return arr;
 };
+
+// const object1 = {
+//   a: 'somestring',
+//   b: 42,
+//   c: false
+// };
+
+// console.log(Object.myKeys(object1));
+// Expected output: Array ["a", "b", "c"]
+
 
 // VALUES //
 Object.myValues = function(object) {
