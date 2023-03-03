@@ -83,7 +83,27 @@ Array.prototype.myEvery = function(callbackFn) {
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
   // Place your code here.
+  let num = 0;
+  for (let i = 0; i < this.length; i++){
+    
+    num = callbackFn(this[i],num)
+    console.log(num)
+  }
+  return num;
 };
+
+// const array4 = [1, 2, 3, 4];
+
+// // 0 + 1 + 2 + 3 + 4
+// const initialValue = 0;
+// const sumWithInitial = array4.myReduce(
+//   (accumulator, currentValue) => accumulator + currentValue,
+//   initialValue
+// );
+
+console.log(sumWithInitial);
+// Expected output: 10
+
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
