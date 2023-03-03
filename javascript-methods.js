@@ -50,7 +50,17 @@ Array.prototype.myFilter = function(callbackFn) {
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
   // Place your code here.
+  for (let i = 0; i < this.length; i++){
+    const pass_test = callbackFn(this[i],i,this)
+    if (pass_test){
+      return true;
+    }
+  }
+  return false;
 };
+
+// console.log([2, 5, 8, 1, 4].mySome((x) => x > 10)); // false
+// console.log([12, 5, 8, 1, 4].mySome((x) => x > 10)); // true
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
