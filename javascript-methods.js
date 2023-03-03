@@ -101,7 +101,7 @@ Array.prototype.myReduce = function(callbackFn) {
 //   initialValue
 // );
 
-console.log(sumWithInitial);
+//console.log(sumWithInitial);
 // Expected output: 10
 
 
